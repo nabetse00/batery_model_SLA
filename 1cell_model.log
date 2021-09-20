@@ -1,0 +1,21 @@
+Circuit: * C:\Users\esteb\Documents\ELEC\battery_model\1cell_model.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Sep 20 21:29:55 2021
+Total elapsed time: 0.098 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2394
+traniter = 2388
+tranpoints = 1141
+accept = 1127
+rejected = 14
+matrix size = 12
+fillins = 12
+solver = Normal
+Matrix Compiler1: 814 bytes object code size  0.3/0.2/[0.1]
+Matrix Compiler2: 996 bytes object code size  0.2/0.2/[0.1]
+
