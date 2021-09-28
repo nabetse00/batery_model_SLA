@@ -6,11 +6,13 @@ Do:
 * Scalable from 1 to 12 cells
 * Quick simulation
 * No discontinuity in function and derivative (no linear interpolation)
+* LT spice simulation
 
 Don't:
 * real life acurate
 * Time consistant
 * Temperature dependancy will not be taken in account
+* no general spice simulation planed
 ## Model construction
 This model is based on shifting a simple charge curve at C/40 taken from [Lead-Acid Battery State of Charge vs. Voltage](./assets/pdf/lead_acid_battery_charging_graphs.pdf).
 Those values are from a 12V lead acid batery, divided by six they give a raw aproximation for a one cell.
@@ -52,8 +54,9 @@ Model function error:
 * mean error is: 0.3644%
 
 For our purposes 1% error is aceptable.
+See [1 cell notebook](./model.ipynb.py) for more details.
 
-Implemetation in LT spice is realised by:
+## Implemetation in LT spice is realised by:
 * clamps with `ideal diodes`
 * 1 Meg paralled resistor minimal current for charging:
 $$
@@ -64,3 +67,16 @@ $$
 C = \frac{3600.C_{AH}}{-R.\ln(1-\dfrac{100}{R})}
 $$
 For ~10ms full charge at 1A C=~100uF
+
+See [RC parallel](./RC_parallel.ipynb) notebook for details.
+
+## Model simulation
+LTspice simulation for 1 cell: [1 cell model ](./1cell_model.asc).
+Results:
+![1 Cell grpah](./assets/img/1cell_model.png)
+no acurate for a real life model but good enuought fot a raw simulation.
+Here is the circuit:
+![1 Cell grpah](./assets/img/1cell_model_circuit.png)
+
+
+
