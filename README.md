@@ -15,13 +15,16 @@ Don't:
 * no general spice simulation planed
 ## Model construction
 This model is based on shifting a simple charge curve at C/40 taken from [Lead-Acid Battery State of Charge vs. Voltage](./assets/pdf/lead_acid_battery_charging_graphs.pdf).
-Those values are from a 12V lead acid batery, divided by six they give a raw aproximation for a one cell.
+Those values are from a 12V lead acid batery, divided by six they give a raw aproximation for one cell.
 
 Here is a graph from pdf values:
-![SOC vs Batery voltage from 10% to 110%](./assets/img/soc_bat12.png)
+
+<img style="background-color:white" alt="SOC vs Batery voltage from 10% to 110%" src="./assets/img/soc_bat12.png"></img>
 
 From this data divided by six:
-![SOC vs Batery voltage from 10% to 110%](./assets/img/soc_cell.png)
+
+<img style="background-color:white" alt="SOC vs Batery voltage from 10% to 110%"
+src="./assets/img/soc_cell.png"/>
 
 From this a model is derived. Choosen function  is a combination of logaritmic, exponential approximation, central function is linear.
 $$  a.ln(b.x) + c.d^{e.x} + fx +g $$
@@ -46,7 +49,9 @@ Restricting values to significan digits:
 * g=1.68
 
 Model fitting plot:
-![Fitted curve](./assets/img/curve_fit.png)
+<img style="background-color:white"
+alt="Fitted curve" src="./assets/img/curve_fit.png">
+</img>
 
 Model function error:
 * max error is: 0.8683%
@@ -74,9 +79,12 @@ See [RC parallel](./RC_parallel.ipynb) notebook for details.
 LTspice simulation for 1 cell: [1 cell model ](./1cell_model.asc).
 Results:
 ![1 Cell grpah](./assets/img/1cell_model.png)
-no acurate for a real life model but good enuought fot a raw simulation.
+
+Not acurate for a real life model but good enought for a raw simulation.
 Here is the circuit:
 ![1 Cell grpah](./assets/img/1cell_model_circuit.png)
+
+
 
 
 
