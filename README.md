@@ -152,7 +152,7 @@ See [n cells model](./models/leadAcid_ncell_sep_gnd.lib) for n cell model.
 
 *internal parameters
 .param Capa_soc={3600*{CAPAH}/(-{Rsoc}*log(1-100/{Rsoc}))}
-.param nvclip={6*vclip}
+.param nvclip={n*vclip}
 
 * Subcircuit Body
 Db1 0 SOC Db
