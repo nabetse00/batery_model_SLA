@@ -170,7 +170,7 @@ Rchg in+ N003 {Rchg}
 Db4 N001 N006 Db
 Voverchg N006 in- {nvclip}
 B2 0 SOC I=I(V1)
-.ends 1cell_leadacid_sepgnd
+.ends ncell_leadacid_sepgnd
 ```
 
 ![LTSpice test circuit](./assets/img/ncell_model_test_circuit.png)
