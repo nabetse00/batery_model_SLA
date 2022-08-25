@@ -29,7 +29,8 @@ From this data divided by six:
 src="./assets/img/soc_cell.png"/>
 
 From this a model is derived. Choosen function  is a combination of logaritmic, exponential approximation, central function is linear.
-$$  a.ln(b.x) + c.d^{e.x} + fx +g $$
+
+$$a.ln(b.x) + c.d^{e.x} + fx +g$$
 
 Curve fiting results:
 * a=1.33039653e-01
@@ -66,13 +67,9 @@ See [1 cell notebook](./notebooks/model.ipynb) for more details.
 ## Implemetation in LT spice is realised by:
 * clamps with `ideal diodes`
 * 1 Meg paralled resistor minimal current for charging:
-$$
-I_{chg}=\frac{100}{R} = 100 uA
-$$
+$$I_{chg}=\frac{100}{R} = 100 uA$$
 * Capacitor value for corresponding battery capacity or quick simulation in this case. Operation: 
-$$
-C = \frac{3600.C_{AH}}{-R.\ln(1-\dfrac{100}{R})}
-$$
+$$C = \frac{3600.C_{AH}}{-R.\ln(1-\dfrac{100}{R})}$$
 For ~10ms full charge at 1A C=~100uF
 
 See [RC parallel](./RC_parallel.ipynb) notebook for details.
